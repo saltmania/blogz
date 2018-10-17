@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+            }
+            form {
+                background-color: #eee;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+            textarea {
+                margin: 10px 0;
+                width: 540px;
+                height: 120px;
+            }
+            span.error {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+   
+    <h1>Login</h1>
+         <p class="error"></p>
+        <form method="post">
+                <table>
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td>
+                            <input name="username" type="text" value="">
+                            <span class="error">{{username_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td>
+                            <input name="password" type="password">
+                            <span class="error">{{password_error}}</span>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit">
+                <p>Don't have an account? <a href="/signup">Create one!</a></p>
+            </form>
+            
+    </body>
+</html>
